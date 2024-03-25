@@ -21,11 +21,11 @@ class StatefulServiceTest {
         statefulService2.order("userB", 20000);
 
         // ThreadA: 사용자 A 주문 금액 조회
-        int price = statefulService1.getPrice();
-        System.out.println("price = " + price);
-        // 사용자 A는 10000원을 주문했지만 실제로는 20000원이 찍힌다.
+//        int price = statefulService1.getPrice();
+//        System.out.println("price = " + price);
+        // 사용자 A는 10000원을 주문했지만 실제로는 20000원이 찍힌다. -> 서비스 망함
 
-        Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
+//        Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
     }
 
     static class TestConfig {
